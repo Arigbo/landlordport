@@ -1,0 +1,288 @@
+body {
+  font-family: "DM Sans", sans-serif;
+  background-color: whitesmoke;
+  color: #000;
+  padding: 0;
+  margin: 0;
+  transition: all 0.3s ease;
+}
+body a {
+  text-decoration: none;
+  color: black;
+}
+body h1 {
+  margin: 0;
+  padding: 0;
+}
+body h4 {
+  margin: 0;
+  padding: 0;
+}
+body h6 {
+  padding: 0;
+  margin: 0;
+}
+body button {
+  padding: 0.5rem 1.3rem;
+  background-color: green;
+  border: none;
+  color: white;
+}
+body.dark {
+  background-color: #000;
+  transition: all 0.3s ease-in;
+  color: white;
+}
+body.dark a {
+  color: #fff;
+  transition: all 0.3s ease;
+}
+body .portfolio_nav_left {
+  display: flex;
+}
+body .portfolio_nav_left_logo {
+  width: 2rem;
+  height: 2rem;
+}
+body .portfolio nav {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  right: 0;
+  left: 0;
+  top: 0;
+  padding-inline: 4rem;
+}
+body .portfolio nav img {
+  width: 100%;
+  border-radius: 4rem;
+}
+body .portfolio nav ul {
+  padding-inline: 0rem 2rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-size: 0.9rem;
+}
+body .portfolio_hero {
+  padding: 4rem 1rem 1rem 4rem;
+  margin: 0;
+  border-radius: 20px;
+  background-image: url(/images/landing.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+body .portfolio_hero_top {
+  padding-block-start: 4rem;
+  padding-block-end: 3rem;
+}
+body .portfolio_hero_top h6 {
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+body .portfolio_hero_top_second h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+}
+body .portfolio_hero_top_third {
+  margin-block-end: 0.8rem;
+}
+body .portfolio_hero_bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block-start: 4rem;
+}
+body .portfolio_hero_bottom_contacts_means {
+  display: flex;
+}
+body .portfolio_hero_bottom_contacts_means_email, body .portfolio_hero_bottom_contacts_means_phone, body .portfolio_hero_bottom_contacts_means_location {
+  padding-inline: 1rem;
+  border-right: 1px solid;
+}
+body .portfolio_hero_bottom_contacts_means_email h1, body .portfolio_hero_bottom_contacts_means_phone h1, body .portfolio_hero_bottom_contacts_means_location h1 {
+  font-size: 0.8rem;
+}
+body .portfolio_hero_bottom_contacts_means_email a, body .portfolio_hero_bottom_contacts_means_phone a, body .portfolio_hero_bottom_contacts_means_location a {
+  font-size: 0.7rem;
+}
+body .portfolio_hero_bottom_contacts_means_email {
+  padding-inline-start: 0;
+}
+body .portfolio_hero_bottom_contacts_means_location {
+  border: 0;
+}
+body .portfolio_hero_bottom_switch {
+  position: fixed;
+  right: 3rem;
+}
+body .portfolio_hero_bottom_switch h1 {
+  display: none;
+  font-size: 12px;
+  font-weight: 100;
+  background-color: #766f6f;
+  position: absolute;
+  color: white;
+  top: 1rem;
+  left: 1.5rem;
+  padding-inline: 0.4rem;
+  padding-block: 0.2rem;
+  scroll-behavior: smooth;
+}
+body .portfolio_hero_bottom_switch h1.show {
+  display: block;
+}
+body .portfolio_hero_bottom_switch .switch {
+  position: relative;
+  width: 30px;
+  height: 70px;
+  border-radius: 100px;
+  background-color: black;
+  cursor: pointer;
+}
+body .portfolio_hero_bottom_switch .switch::before {
+  content: "";
+  position: absolute;
+  background-color: white;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  bottom: 60%;
+  right: 2px;
+  left: 2px;
+  transition: all 0.3s ease-in;
+}
+body .portfolio_hero_bottom_switch .switch.active::before {
+  content: "";
+  background-color: #000;
+  transition: all 0.3s ease-in;
+  top: 60%;
+  bottom: 1rem;
+}
+body .portfolio_hero_bottom_switch .switch.active {
+  background-color: white;
+}
+body .portfolio_about {
+  padding-block-start: 4rem;
+  padding-inline: 4rem;
+  margin-inline: 4rem;
+}
+body .portfolio_about_header {
+  padding-inline: 2rem;
+  display: flex;
+  align-items: center;
+  margin-block-end: 2.5rem;
+}
+body .portfolio_about_header .h11 {
+  position: absolute;
+  top: 87%;
+  font-size: 4rem;
+  font-weight: 900;
+  color: green;
+  z-index: -1;
+}
+body .portfolio_about_header .h2 {
+  font-size: 1.8rem;
+}
+body .portfolio_about_inner {
+  padding-inline: 2rem;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 0.5fr 1fr;
+  gap: 2rem;
+}
+body .portfolio_about_inner_right_header {
+  padding-block-end: 0.6rem;
+}
+body .portfolio_about_inner_right_header h1 {
+  font-size: 1.3rem;
+  color: green;
+}
+body .portfolio_about_inner_right_intro h1 {
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+}
+body .portfolio_about_inner_right_about-me p {
+  font-size: 0.7rem;
+  line-height: 1.8rem;
+}
+body .portfolio_about_inner_right_info {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid;
+  padding-block-start: 2rem;
+  margin-block-start: 1.2rem;
+}
+body .portfolio_about_inner_right_info h4 {
+  font-size: 0.8rem;
+}
+body .portfolio_about_inner_right_info h6,
+body .portfolio_about_inner_right_info a {
+  font-size: 0.7rem;
+}
+body .portfolio_about_inner_right_info_left_name, body .portfolio_about_inner_right_info_left_age {
+  display: flex;
+  align-items: center;
+  padding-block-end: 1.5rem;
+  gap: 0.5rem;
+}
+body .portfolio_about_inner_right_info_right_from, body .portfolio_about_inner_right_info_right_email {
+  display: flex;
+  align-items: center;
+  padding-block-end: 1.5rem;
+  gap: 0.5rem;
+}
+body .portfolio_about_inner_left img {
+  width: 100%;
+}
+body .portfolio_services {
+  padding-inline: 4rem;
+  padding-block-start: 4rem;
+  margin-block-start: 1rem;
+}
+body .portfolio_services_header {
+  margin-block-end: 3rem;
+}
+body .portfolio_services_header .h11 {
+  position: absolute;
+  bottom: -110.5%;
+  z-index: -1;
+  font-size: 4rem;
+  font-weight: 900;
+  color: green;
+}
+body .portfolio_services_header .h2 {
+  font-size: 1.8rem;
+}
+body .portfolio_services_table {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 1rem;
+}
+body .portfolio_services_table_webdev {
+  padding: 1.5rem;
+  background-color: #766f6f;
+}
+body .portfolio_services_table_webdev.web_dark {
+  transition: all 0.3s ease-in;
+  background-color: rgb(8, 8, 8);
+  color: #fff;
+}
+body .portfolio_services_table_webdev_title {
+  margin-block-start: 1rem;
+}
+body .portfolio_services_table .h1 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+body .portfolio_services_table .p {
+  font-size: 0.6rem;
+  line-height: 1.5rem;
+}
+body .portfolio_services_table i {
+  color: green;
+  font-size: 3rem;
+}/*# sourceMappingURL=index.css.map */
