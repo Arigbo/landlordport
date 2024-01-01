@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500&family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500&family=Josefin+Sans:wght@100&family=Poppins:wght@600&display=swap");
 body {
   font-family: "DM Sans", sans-serif;
   background-color: whitesmoke;
@@ -37,14 +40,64 @@ body.dark a {
   color: #fff;
   transition: all 0.3s ease;
 }
+body .portfolio_sorl {
+  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 0;
+}
+body .portfolio_sorl.hide {
+  display: none;
+}
+body .portfolio_sorl input {
+  border-top: none;
+  border-radius: 4px;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  width: 100%;
+}
+body .portfolio_sorl_inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-block: 2rem;
+  padding-inline: 2rem;
+  margin-top: 15%;
+  margin-inline: 2%;
+}
+body .portfolio_sorl_inner .inputs {
+  margin-block: 1rem;
+}
+body .portfolio_sorl_inner_login {
+  display: none;
+}
+body .portfolio_sorl_inner_login.show {
+  display: block;
+}
+body .portfolio_sorl_inner_signin.hide {
+  display: none;
+}
 body .portfolio_nav_left {
   display: flex;
+  align-items: center;
+  gap: 0.2rem;
 }
 body .portfolio_nav_left_logo {
   width: 2rem;
+  border-radius: 10rem;
+}
+body .portfolio_nav_left_logo img {
+  width: 100%;
   height: 2rem;
+  border-radius: 10rem;
 }
 body .portfolio nav {
+  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
   position: fixed;
   display: flex;
   align-items: center;
@@ -54,10 +107,6 @@ body .portfolio nav {
   top: 0;
   padding-inline: 4rem;
 }
-body .portfolio nav img {
-  width: 100%;
-  border-radius: 4rem;
-}
 body .portfolio nav ul {
   padding-inline: 0rem 2rem;
   list-style: none;
@@ -66,7 +115,7 @@ body .portfolio nav ul {
   gap: 2rem;
   font-size: 0.9rem;
 }
-body .portfolio_hero {
+body .portfolio #portfolio_hero {
   padding: 4rem 1rem 1rem 4rem;
   margin: 0;
   border-radius: 20px;
@@ -75,6 +124,9 @@ body .portfolio_hero {
   background-size: 100%;
 }
 body .portfolio_hero_top {
+  display: flex;
+  gap: 30%;
+  align-items: center;
   padding-block-start: 4rem;
   padding-block-end: 3rem;
 }
@@ -88,6 +140,36 @@ body .portfolio_hero_top_second h1 {
 }
 body .portfolio_hero_top_third {
   margin-block-end: 0.8rem;
+}
+body .portfolio_hero_top_right {
+  color: green;
+}
+body .portfolio_hero_top_right h1 {
+  font-family: "Josefin Sans", sans-serif;
+  line-height: 1rem;
+}
+body .portfolio_hero_top_right .exprience {
+  font-size: 18rem;
+}
+body .portfolio_hero_top_right .loading {
+  display: none;
+  width: 100%;
+  background-color: white;
+  padding: 1rem;
+  position: absolute;
+  z-index: 4;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+body .portfolio_hero_top_right .loading.half {
+  width: 50%;
+}
+body .portfolio_hero_top_right button {
+  display: none;
+  position: absolute;
+  z-index: 4;
+  top: 50px;
 }
 body .portfolio_hero_bottom {
   display: flex;
@@ -164,7 +246,7 @@ body .portfolio_hero_bottom_switch .switch.active::before {
 body .portfolio_hero_bottom_switch .switch.active {
   background-color: white;
 }
-body .portfolio_about {
+body .portfolio #portfolio_about {
   padding-block-start: 4rem;
   padding-inline: 4rem;
   margin-inline: 4rem;
@@ -237,7 +319,7 @@ body .portfolio_about_inner_right_info_right_from, body .portfolio_about_inner_r
 body .portfolio_about_inner_left img {
   width: 100%;
 }
-body .portfolio_services {
+body .portfolio #portfolio_services {
   padding-inline: 4rem;
   padding-block-start: 4rem;
   margin-block-start: 1rem;
@@ -264,23 +346,31 @@ body .portfolio_services_table {
 }
 body .portfolio_services_table_webdev {
   padding: 1.5rem;
-  background-color: #766f6f;
 }
-body .portfolio_services_table_webdev.web_dark {
-  transition: all 0.3s ease-in;
-  background-color: rgb(8, 8, 8);
-  color: #fff;
-}
-body .portfolio_services_table_webdev_title {
-  margin-block-start: 1rem;
-}
-body .portfolio_services_table .h1 {
+body .portfolio_services_table_webdev .h1 {
   font-size: 1.1rem;
   font-weight: 600;
 }
-body .portfolio_services_table .p {
+body .portfolio_services_table_webdev .p {
   font-size: 0.6rem;
   line-height: 1.5rem;
+}
+body .portfolio_services_table_webdev.web_dark {
+  transition: all 0.3s ease-in;
+  background-color: white;
+  color: white;
+}
+body .portfolio_services_table_webdev.web_dark .h1 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+}
+body .portfolio_services_table_webdev.web_dark .p {
+  font-size: 0.6rem;
+  line-height: 1.5rem;
+}
+body .portfolio_services_table_webdev_title {
+  margin-block-start: 1rem;
 }
 body .portfolio_services_table i {
   color: green;
