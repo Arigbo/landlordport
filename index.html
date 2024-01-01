@@ -10,6 +10,36 @@
 
 <body>
     <div class="portfolio">
+        <div class="portfolio_sorl">
+            <div class="portfolio_sorl_inner">
+                <!-- SIGNIN PAGE -->
+                <form class="portfolio_sorl_inner_signin">
+                    <div class="inputs">
+                        <input placeholder="Name" type="text" id="signinname" required>
+                    </div>
+                    <div class="inputs">
+                        <input type="email" name="" placeholder="Email" id="signinemail" required>
+                    </div>
+                    <div class="inputs">
+                        <input type="password" placeholder="Password" name="" id="signinpassword" required>
+                    </div>
+                    <h1 class="gotologin">login</h1>
+                    <button class="signin" title="SIGNIN" type="submit">Signin</button>
+                </form>
+                <!-- LOGIN PAGE -->
+                <form class="portfolio_sorl_inner_login" >
+                    <div class="inputs">
+                        <input placeholder="Name" type="text" id="loginname" class="loginname"  required>
+                    </div>
+                    <div class="inputs">
+                        <input type="password" placeholder="Password" name="" id="loginpassword" class="loginpassword" required>
+                    </div>
+                    <h1 class="gotosignin">signin</h1>
+               <button type="submit" class="login"onclick="login(event)">Login</button>
+                </form>
+
+            </div>
+        </div>
         <nav>
             <div class="portfolio_nav_left">
                 <div class="portfolio_nav_left_logo">
@@ -22,27 +52,42 @@
             </div>
             <div class="portfolio_nav_right">
                 <ul>
-                    <li>Home</li>
-                    <li>Portfolio</li>
-                    <li>Resume</li>
-                    <li>Blog</li>
+                    <a href="#portfolio_hero">
+                        <li>Home</li>
+                    </a>
+                    <a href="#portfolio_about">
+                        <li>Resume</li>
+                    </a>
+                    <a href="#portfolio_services">
+                        <li>Services</li>
+                    </a>
                     <li>Contact</li>
                 </ul>
             </div>
         </nav>
-        <div class="portfolio_hero">
+        <div id="portfolio_hero">
             <div class="portfolio_hero_top">
-                <div class="portfolio_hero_top_first">
-                    <h6>Hi There!</h6>
+                <div class="portfolio_hero_top_left">
+                    <div class="portfolio_hero_top_first">
+                        <h6>Hi There!</h6>
+                    </div>
+                    <div class="portfolio_hero_top_second">
+                        <h1>I'm a Developer <span></span></h1>
+                    </div>
+                    <div class="portfolio_hero_top_third">
+                        <h6>I make the simple <span>but</span> complex webs</h6>
+                    </div>
+                    <div class="portfolio_hero_top_last">
+                        <a href="tel:+2348156996319"><button>Let's talk</button></a>
+                    </div>
                 </div>
-                <div class="portfolio_hero_top_second">
-                    <h1>I'm a Developer <span></span></h1>
-                </div>
-                <div class="portfolio_hero_top_third">
-                    <h6>I make the simple <span>but</span> complex webs</h6>
-                </div>
-                <div class="portfolio_hero_top_last">
-                    <a href="tel:+2348156996319"><button>Let's talk</button></a>
+                <div class="portfolio_hero_top_right">
+                    <h1>Exp</h1>
+                    <h1><span class="exprience"></span>+</h1>
+                    <div class="loading">
+                        <h1>loading <span class="num"></span></h1>
+                    </div>
+                    <button title="h" onclick="loading()"></button>
                 </div>
             </div>
             <div class="portfolio_hero_bottom">
@@ -73,7 +118,7 @@
 
             </div>
         </div>
-        <div class="portfolio_about">
+        <div id="portfolio_about">
             <div class="portfolio_about_header">
                 <h1 class="h11">ABOUT</h1>
                 <h1 class="h2">About Me</h1>
@@ -106,6 +151,7 @@
                             <div class="portfolio_about_inner_right_info_left_age">
                                 <h4>Age:</h4>
                                 <h6 class="age"></h6>
+
                             </div>
                             <div class="portfolio_about_inner_right_info_left_button">
                                 <button>Download CV</button>
@@ -113,11 +159,11 @@
                         </div>
                         <div class="portfolio_about_inner_right_info_right">
                             <div class="portfolio_about_inner_right_info_right_from">
-                                <h4>From</h4>
+                                <h4>From:</h4>
                                 <h6>Rivers State, Nigeria</h6>
                             </div>
                             <div class="portfolio_about_inner_right_info_right_email">
-                                <h4>Email</h4>
+                                <h4>Email:</h4>
                                 <a href="mailto:arigbojesse75@gmail.com">arigbojesse75@gmail.com</a>
                             </div>
                         </div>
@@ -125,7 +171,7 @@
                 </div>
             </div>
         </div>
-        <div class="portfolio_services">
+        <div id="portfolio_services">
             <div class="portfolio_services_header">
                 <h1 class="h11">SERVICES</h1>
                 <h1 class="h2">My Services</h1>
@@ -254,12 +300,60 @@
 
 </body>
 <script>
-    let root = localStorage.getItem("mode");
+    let count = 0
+    function loading() {
+        count++
+        document.querySelector(".num").innerHTML = count
+        if (count === 10 || count === 20) {
+            document.querySelector(".loading").classList.toggle("half")
+        }
+    }
+    let year = 2004;
+    let month = 6;
+    let day = 7;
+    let birthDate = new Date(year, month, day);
+    let currentDate = new Date();
+    let age = (currentDate.getFullYear() - birthDate.getFullYear()) + "years";
+    document.querySelector(".age").innerHTML = age
 
+    let yearStarted = 2021;
+    let monthStarted = 6;
+    let expStart = new Date(yearStarted, monthStarted);
+    let exprience = (currentDate.getFullYear() - expStart.getFullYear())
+    document.querySelector(".exprience").innerHTML = exprience
+    // LOIGN OR SIGNIN PAGE CONTRLLER
+    document.querySelector(".gotologin").addEventListener("click", () => {
+        document.querySelector(".portfolio_sorl_inner_login").classList.toggle("show");
+        document.querySelector(".portfolio_sorl_inner_signin").classList.toggle("hide");
+
+    })
+    document.querySelector(".gotosignin").addEventListener("click", () => {
+        document.querySelector(".portfolio_sorl_inner_login").classList.toggle("show");
+        document.querySelector(".portfolio_sorl_inner_signin").classList.toggle("hide");
+
+    })
+    // let inputname =;
+    // let inputpassword = document.querySelector('#loginpassword').checkVisibility;
+    let name = "jesse";
+    let password = 2;
+    // document.querySelector(".login").addEventListener("click", () => {
+       
+    // })
+    function login(event){
+        if ( (document.querySelector("#loginname")).value.trim("") === name ) {
+            document.querySelector(".portfolio_sorl").classList.add("hide");
+          console.log("h1");
+        }
+        // else {
+        //     document.querySelector(".portfolio_sorl").classList.add("hide");
+        // }
+    }
+    // DARK MODE CONTROLLER
+    let root = localStorage.getItem("mode");
     document.querySelector(".switch").addEventListener("click", () => {
         document.querySelector("body").classList.toggle("dark");
         document.querySelector(".switch").classList.toggle("active");
-        document.querySelectorAll(".portfolio_services_table_webdev").classList.toggle("web_dark");
+        // document.querySelectorAll(".portfolio_services_table_webdev").classList.add("web_dark");
         if (!document.querySelector("body").classList.contains("dark")) {
             return localStorage.setItem("mode", "light");
         }
@@ -269,19 +363,19 @@
     if (root && root === "dark") {
         document.querySelector("body").classList.add("dark");
         document.querySelector(".switch").classList.add("active");
-        document.querySelectorAll(".portfolio_services_table_webdev").classList.add("web_dark");
+        // document.querySelectorAll(".portfolio_services_table_webdev").classList.add("web_dark");
     }
     if (root && root === "light") {
         document.querySelector("body").classList.remove("dark");
         document.querySelector(".switch").classList.remove("active");
-        document.querySelectorAll(".portfolio_services_table_webdev").classList.remove("web_dark");
+        // document.querySelectorAll(".portfolio_services_table_webdev").classList.remove("web_dark");
     }
     // document.querySelector(".switch").addEventListener("click", () => document.querySelector(".portfolio_services_table_webdev").classList.toggle("web_dark"))
     // document.querySelector(".switch").addEventListener("click", () => document.querySelector(".portfolio_services_table_webdev").classList.toggle("web_dark"))
     // document.querySelector(".switch").addEventListener("click", () => )
     // document.querySelector(".switch").addEventListener("click", () => document.querySelectorAll("ul").classList.toggle("li"))
     // document.querySelector(".switch").addEventListener("click", () => document.querySelectorAll("a").classList.toggle("a"))
-    function hove(){
+    function hove() {
         document.querySelector(".tag").classList.toggle("show")
     }
 </script>
