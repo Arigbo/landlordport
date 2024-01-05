@@ -13,33 +13,38 @@
         <div class="portfolio_sorl">
             <div class="portfolio_sorl_inner">
                 <!-- SIGNIN PAGE -->
-                <form class="portfolio_sorl_inner_signin">
+                <form class="portfolio_sorl_inner_signup">
                     <div class="inputs">
-                        <input placeholder="Name" type="text" id="signinname" required>
+                        <input placeholder="Name" type="text" id="signupname" autocomplete="additional-name" required>
                     </div>
                     <div class="inputs">
-                        <input type="email" name="" placeholder="Email" id="signinemail" required>
+                        <input type="email" name="" placeholder="Email" id="signupemail" autocomplete="additional-name"
+                            required>
                     </div>
                     <div class="inputs">
-                        <input type="password" placeholder="Password" name="" id="signinpassword" required>
+                        <input type="password" placeholder="Password" name="" autofocus id="signuppassword"
+                            autocomplete="additional-name" required>
                     </div>
                     <h1 class="gotologin">login</h1>
-                    <button class="signin" title="SIGNIN" type="submit">Signin</button>
+                    <button class="signup" title="SIGNUP" type="submit">Signup</button>
                 </form>
                 <!-- LOGIN PAGE -->
-                <form class="portfolio_sorl_inner_login" >
+                <form class="portfolio_sorl_inner_login" id="formId">
                     <div class="inputs">
-                        <input placeholder="Name" type="text" id="loginname" class="loginname"  required>
+                        <h1 class="ogmssg"></h1>
+                        <input placeholder="Name" type="text" id="loginname" class="loginname" name="name"
+                            autocomplete="additional-name" required oninput="welcomeMssg()">
                     </div>
                     <div class="inputs">
-                        <input type="password" placeholder="Password" name="" id="loginpassword" class="loginpassword" required>
+                        <input type="password" placeholder="Password" name="password" autofocus id="loginpassword"
+                            class="loginpassword" autocomplete="additional-name" required>
                     </div>
-                    <h1 class="gotosignin">signin</h1>
-               <button type="submit" class="login"onclick="login(event)">Login</button>
+                    <h1 class="gotosignup">signin</h1>
+                    <button title="LOGIN" class="login" onclick="login(event)">Lgin</button>
                 </form>
-
             </div>
         </div>
+
         <nav>
             <div class="portfolio_nav_left">
                 <div class="portfolio_nav_left_logo">
@@ -118,6 +123,9 @@
 
             </div>
         </div>
+        <div class="portfolio_welcome">
+            <h1 class="Welcome"> Welcome <span class="welcome_name"></span></h1>
+        </div>
         <div id="portfolio_about">
             <div class="portfolio_about_header">
                 <h1 class="h11">ABOUT</h1>
@@ -177,7 +185,7 @@
                 <h1 class="h2">My Services</h1>
             </div>
             <div class="portfolio_services_table">
-                <div class="portfolio_services_table_webdev">
+                <!-- <div class="portfolio_services_table_webdev">
                     <div class="portfolio_services_table_webdev_icon">
                         <i class="fas fa-cube"></i>
                     </div>
@@ -293,13 +301,14 @@
                             voluptates
                             repellendus eligendi praesentium dolorum sapiente minima iure velit.</p>
                     </div>
-                </div>
+                </div> -->
             </div>
             </di>
         </div>
 
 </body>
 <script>
+
     let count = 0
     function loading() {
         count++
@@ -321,34 +330,111 @@
     let expStart = new Date(yearStarted, monthStarted);
     let exprience = (currentDate.getFullYear() - expStart.getFullYear())
     document.querySelector(".exprience").innerHTML = exprience
-    // LOIGN OR SIGNIN PAGE CONTRLLER
+    // LOIGN OR SIGNUPPAGE CONTRLLER
+    let veripages = localStorage.getItem("veripages");
     document.querySelector(".gotologin").addEventListener("click", () => {
         document.querySelector(".portfolio_sorl_inner_login").classList.toggle("show");
-        document.querySelector(".portfolio_sorl_inner_signin").classList.toggle("hide");
+        document.querySelector(".portfolio_sorl_inner_signup").classList.toggle("hide");
+        console.log("login page");
+        return localStorage.setItem("veripages", "login")
 
     })
-    document.querySelector(".gotosignin").addEventListener("click", () => {
+    document.querySelector(".gotosignup").addEventListener("click", () => {
         document.querySelector(".portfolio_sorl_inner_login").classList.toggle("show");
-        document.querySelector(".portfolio_sorl_inner_signin").classList.toggle("hide");
+        document.querySelector(".portfolio_sorl_inner_signup").classList.toggle("hide");
+        console.log("signup page");
+        return localStorage.setItem("veripages", "signup")
 
     })
-    // let inputname =;
-    // let inputpassword = document.querySelector('#loginpassword').checkVisibility;
-    let name = "jesse";
-    let password = 2;
-    // document.querySelector(".login").addEventListener("click", () => {
-       
-    // })
-    function login(event){
-        if ( ((document.querySelector("#loginname")).value.trim("") === name ) && ((document.querySelector("#loginpassword")).value.trim("") === password)){
-            document.querySelector(".portfolio_sorl").classList.add("hide");
-          console.log("h1");
-        }
-        // else {
+    if (veripages && veripages === "login") {
+        document.querySelector(".portfolio_sorl_inner_login").classList.add("show");
+        document.querySelector(".portfolio_sorl_inner_signup").classList.add("hide");
+        console.log("login page");
+    }
+    if (veripages && veripages === "signup") {
+        document.querySelector(".portfolio_sorl_inner_login").classList.remove("show");
+        document.querySelector(".portfolio_sorl_inner_signup").classList.remove("hide");
+        console.log("signup page");
+    }
+
+    // RULE SET FOR SIGNUP
+    let signed = localStorage.getItem("signup")
+    function signup(event) {
+        // if ((!document.querySelector("#loginname").value.trim("") === name) || (!document.querySelector("#loginpassword").value.trim("") === password)) {
+        //     console.log("not correct");
+        // }
+        // else if ((document.querySelector("#loginname").value.trim("") === name) || (document.querySelector("#loginpassword").value.trim("") === password)) {
         //     document.querySelector(".portfolio_sorl").classList.add("hide");
+        //     console.log("correct");
+        //     return localStorage.setItem("login", "logined");
+        //     document.querySelector(".welcome_name").innerHTML = document.querySelector("#loginname").value
         // }
     }
-    // DARK MODE CONTROLLER
+    // RULE SET FOR LOGININ
+    let identity = [
+        {
+            identity_name: "jesse",
+            identity_password: 123456,
+        },
+        {
+            identity_name: "mary",
+            identity_password: 1,
+        }
+    ]
+    // document.querySelector(".login").addEventListener("click", () => {
+
+    // })
+    let logined = localStorage.getItem("login")
+    function login() {
+        if (document.querySelector("#loginname").value == identity.identity_name && document.querySelector("#loginpassword").value == identity.identity_password) {
+            document.querySelector(".portfolio_sorl").classList.add("hide");
+            console.log("correct");
+            return localStorage.setItem("login", "logined");
+            for (let identitys of identity){
+                if(document.querySelector("#loginname").value === identitys.identity_name){
+                    return  document.querySelector(".welcome_name").innerHTML =identitys
+                }
+            }
+    
+        }
+        else if (document.querySelector("#loginname").value == identity.identity_name && document.querySelector("#loginpassword").value !== identity.identity_password) {
+            console.log("Not ", document.querySelector("#loginname").value, "'s password");
+            document.querySelector(".ogmssg").innerHTML = "OG HOW FAR NAW!, YOU WAWN WHINE ME PASSWORD NAW";
+        }
+        else if (document.querySelector("#loginname").value !== identity.identity_name && document.querySelector("#loginpassword").value == identity.identity_password) {
+            console.log("Not ", document.querySelector("#loginpassword").value, "'s name");
+            document.querySelector(".ogmssg").innerHTML = "OG HOW FAR NAW!, NAME NO BALANCE NAW!!!!!";
+        }
+        else if (document.querySelector("#loginname").value.trim() == "" && document.querySelector("#loginpassword").value.trim() == "") {
+            console.log("input somerhing");
+            document.querySelector(".ogmssg").innerHTML = "OG HOW FAR NAW!!!!";
+        }
+        else {
+            document.querySelector(".ogmssg").innerHTML = "OG HOW FAR NAW!, INPUT NO BALANCE WITH WETIN YOU PASTE NAW!!"
+            console.log("not correct");
+        }
+
+    }
+
+    // if (logined && logined === "logined") {
+    //     document.querySelector(".portfolio_sorl").classList.add("hide");
+    //     console.log("logged");
+    // }
+
+    // FORM CONTROL
+    //Get form element
+    var form = document.getElementById("formId");
+    function submitForm(event) {
+
+        //Preventing page refresh
+
+        event.preventDefault();
+    }
+
+    //Calling a function during form submission.
+    form.addEventListener('submit', submitForm);
+
+    // MODE CONTROLLER
     let root = localStorage.getItem("mode");
     document.querySelector(".switch").addEventListener("click", () => {
         document.querySelector("body").classList.toggle("dark");
@@ -370,11 +456,7 @@
         document.querySelector(".switch").classList.remove("active");
         // document.querySelectorAll(".portfolio_services_table_webdev").classList.remove("web_dark");
     }
-    // document.querySelector(".switch").addEventListener("click", () => document.querySelector(".portfolio_services_table_webdev").classList.toggle("web_dark"))
-    // document.querySelector(".switch").addEventListener("click", () => document.querySelector(".portfolio_services_table_webdev").classList.toggle("web_dark"))
-    // document.querySelector(".switch").addEventListener("click", () => )
-    // document.querySelector(".switch").addEventListener("click", () => document.querySelectorAll("ul").classList.toggle("li"))
-    // document.querySelector(".switch").addEventListener("click", () => document.querySelectorAll("a").classList.toggle("a"))
+    // EXTRA MODE SWITCH CONTROL
     function hove() {
         document.querySelector(".tag").classList.toggle("show")
     }

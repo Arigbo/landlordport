@@ -78,8 +78,11 @@ body .portfolio_sorl_inner_login {
 body .portfolio_sorl_inner_login.show {
   display: block;
 }
-body .portfolio_sorl_inner_signin.hide {
+body .portfolio_sorl_inner_signup.hide {
   display: none;
+}
+body .portfolio_welcome {
+  z-index: 1;
 }
 body .portfolio_nav_left {
   display: flex;
@@ -121,7 +124,8 @@ body .portfolio #portfolio_hero {
   border-radius: 20px;
   background-image: url(/images/landing.jpg);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
+  background-position: 100%;
 }
 body .portfolio_hero_top {
   display: flex;

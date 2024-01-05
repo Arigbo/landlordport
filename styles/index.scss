@@ -102,12 +102,15 @@ body {
                         display: block;
                     }
                 }
-                &_signin{
+                &_signup{
                     &.hide{
                         display: none;
                     }
                 }
             }
+        }
+        &_welcome{
+            z-index: 1;
         }
 
         &_nav {
@@ -159,7 +162,8 @@ body {
             border-radius: 20px;
             background-image: url(/images/landing.jpg);
             background-repeat: no-repeat;
-            background-size: 100%;
+            background-size: cover;
+            background-position: 100%;
         }
 
         &_hero {
@@ -186,7 +190,7 @@ body {
                     margin-block-end: 0.8rem;
                 }
 
-                &_last {}
+                // &_last {}
 
                 padding-block-end: 3rem;
 
