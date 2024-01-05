@@ -330,7 +330,11 @@ body {
 
             }
         }
-
+&_welcome{
+    span{
+        text-transform: capitalize;
+    }
+}
         #portfolio_about {
             padding-block-start: 4rem;
             padding-inline: 4rem;

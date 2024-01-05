@@ -250,6 +250,9 @@ body .portfolio_hero_bottom_switch .switch.active::before {
 body .portfolio_hero_bottom_switch .switch.active {
   background-color: white;
 }
+body .portfolio_welcome span {
+  text-transform: capitalize;
+}
 body .portfolio #portfolio_about {
   padding-block-start: 4rem;
   padding-inline: 4rem;

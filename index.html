@@ -308,7 +308,6 @@
 
 </body>
 <script>
-
     let count = 0
     function loading() {
         count++
@@ -371,37 +370,41 @@
         // }
     }
     // RULE SET FOR LOGININ
-    let identity = [
+    let logined = localStorage.getItem("login")
+    const identity = [
         {
-            identity_name: "jesse",
-            identity_password: 123456,
+            id: 34,
+            name: "jesse",
+            password: 123456,
         },
         {
-            identity_name: "mary",
-            identity_password: 1,
+            id: 35,
+            name: "mary",
+            password: 1,
         }
     ]
-    // document.querySelector(".login").addEventListener("click", () => {
+    function welcomeMssg(list, name) {
 
-    // })
-    let logined = localStorage.getItem("login")
-    function login() {
-        if (document.querySelector("#loginname").value == identity.identity_name && document.querySelector("#loginpassword").value == identity.identity_password) {
+        return document.querySelector(".welcome_name").innerHTML = findNameById(identity, document.querySelector("#loginname").value);
+
+    }
+
+    function findNameById(list, name) {
+        return list.find((obj) => obj.name === name).name;
+    }
+    console.log(findNameById(identity, "jesse"))
+    document.querySelector(".login").addEventListener("click", () => {
+  for (let id of identity){
+    if (document.querySelector("#loginname").value == id.name && document.querySelector("#loginpassword").value == id.password) {
             document.querySelector(".portfolio_sorl").classList.add("hide");
             console.log("correct");
             return localStorage.setItem("login", "logined");
-            for (let identitys of identity){
-                if(document.querySelector("#loginname").value === identitys.identity_name){
-                    return  document.querySelector(".welcome_name").innerHTML =identitys
-                }
-            }
-    
         }
-        else if (document.querySelector("#loginname").value == identity.identity_name && document.querySelector("#loginpassword").value !== identity.identity_password) {
+        else if (document.querySelector("#loginname").value == id.name && document.querySelector("#loginpassword").value !== id.password) {
             console.log("Not ", document.querySelector("#loginname").value, "'s password");
             document.querySelector(".ogmssg").innerHTML = "OG HOW FAR NAW!, YOU WAWN WHINE ME PASSWORD NAW";
         }
-        else if (document.querySelector("#loginname").value !== identity.identity_name && document.querySelector("#loginpassword").value == identity.identity_password) {
+        else if (document.querySelector("#loginname").value !== id.name && document.querySelector("#loginpassword").value == id.password) {
             console.log("Not ", document.querySelector("#loginpassword").value, "'s name");
             document.querySelector(".ogmssg").innerHTML = "OG HOW FAR NAW!, NAME NO BALANCE NAW!!!!!";
         }
@@ -413,13 +416,13 @@
             document.querySelector(".ogmssg").innerHTML = "OG HOW FAR NAW!, INPUT NO BALANCE WITH WETIN YOU PASTE NAW!!"
             console.log("not correct");
         }
+  }
+    })
 
+    if (logined && logined === "logined") {
+        document.querySelector(".portfolio_sorl").classList.add("hide");
+        console.log("logged");
     }
-
-    // if (logined && logined === "logined") {
-    //     document.querySelector(".portfolio_sorl").classList.add("hide");
-    //     console.log("logged");
-    // }
 
     // FORM CONTROL
     //Get form element
