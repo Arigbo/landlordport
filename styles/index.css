@@ -40,10 +40,14 @@ body.dark a {
   color: #fff;
   transition: all 0.3s ease;
 }
+body.dark .portfolio_welcome {
+  background-color: #000;
+}
 body .portfolio_sorl {
   -webkit-backdrop-filter: blur(24px);
   backdrop-filter: blur(24px);
   position: fixed;
+  z-index: 2;
   right: 0;
   left: 0;
   bottom: 0;
@@ -203,6 +207,7 @@ body .portfolio_hero_bottom_contacts_means_location {
 body .portfolio_hero_bottom_switch {
   position: fixed;
   right: 3rem;
+  z-index: 4;
 }
 body .portfolio_hero_bottom_switch h1 {
   display: none;
@@ -249,6 +254,27 @@ body .portfolio_hero_bottom_switch .switch.active::before {
 }
 body .portfolio_hero_bottom_switch .switch.active {
   background-color: white;
+}
+body .portfolio_welcome {
+  position: fixed;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding-inline: 20%;
+  padding-block: 4rem;
+}
+body .portfolio_welcome_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body .portfolio_welcome_top .fas {
+  font-size: 2rem;
+}
+body .portfolio_welcome.show {
+  display: block;
 }
 body .portfolio_welcome span {
   text-transform: capitalize;
