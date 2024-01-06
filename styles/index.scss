@@ -345,7 +345,7 @@ body {
             left: 0;
             padding-inline: 20%;
             padding-block: 4rem;
-          
+
             &.hide {
                 display: none;
             }
@@ -353,6 +353,7 @@ body {
             span {
                 text-transform: capitalize;
             }
+
             &_top {
                 display: flex;
                 align-items: center;
@@ -360,7 +361,7 @@ body {
 
                 .fas {
                     font-size: 2rem;
-
+                    cursor: pointer;
                 }
             }
 

@@ -278,6 +278,7 @@ body .portfolio_welcome_top {
 }
 body .portfolio_welcome_top .fas {
   font-size: 2rem;
+  cursor: pointer;
 }
 body .portfolio #portfolio_about {
   padding-block-start: 4rem;
