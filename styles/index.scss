@@ -345,15 +345,7 @@ body {
             left: 0;
             padding-inline: 20%;
             padding-block: 4rem;
-&_top{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    .fas{
-        font-size: 2rem;
-    }
-}
-            // display: none;
+            display: none;
             &.show {
                 display: block;
             }
@@ -361,6 +353,17 @@ body {
             span {
                 text-transform: capitalize;
             }
+            &_top {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .fas {
+                    font-size: 2rem;
+
+                }
+            }
+
         }
 
         #portfolio_about {

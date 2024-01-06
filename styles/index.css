@@ -264,6 +264,13 @@ body .portfolio_welcome {
   left: 0;
   padding-inline: 20%;
   padding-block: 4rem;
+  display: none;
+}
+body .portfolio_welcome.show {
+  display: block;
+}
+body .portfolio_welcome span {
+  text-transform: capitalize;
 }
 body .portfolio_welcome_top {
   display: flex;
@@ -272,12 +279,6 @@ body .portfolio_welcome_top {
 }
 body .portfolio_welcome_top .fas {
   font-size: 2rem;
-}
-body .portfolio_welcome.show {
-  display: block;
-}
-body .portfolio_welcome span {
-  text-transform: capitalize;
 }
 body .portfolio #portfolio_about {
   padding-block-start: 4rem;

@@ -314,7 +314,7 @@
 
 </body>
 <script>  document.querySelector(".fa-x").addEventListener("click", () => {
-    
+      document.querySelector(".portfolio_welcome").classList.remove("show")
 })
     let count = 0
     function loading() {
@@ -411,9 +411,9 @@
         for (let id of identity) {
             if (document.querySelector("#loginname").value == id.name && document.querySelector("#loginpassword").value == id.password) {
                 document.querySelector(".portfolio_sorl").classList.add("hide");
+                document.querySelector(".portfolio_welcome").classList.add("show")
                 console.log("correct");
                 localStorage.setItem("name", findNameById(identity, document.querySelector("#loginname").value))
-
                 return localStorage.setItem("login", "logined");
 
             }
