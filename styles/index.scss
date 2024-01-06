@@ -345,9 +345,9 @@ body {
             left: 0;
             padding-inline: 20%;
             padding-block: 4rem;
-            display: none;
-            &.show {
-                display: block;
+          
+            &.hide {
+                display: none;
             }
 
             span {

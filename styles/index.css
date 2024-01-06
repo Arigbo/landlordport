@@ -264,10 +264,9 @@ body .portfolio_welcome {
   left: 0;
   padding-inline: 20%;
   padding-block: 4rem;
-  display: none;
 }
-body .portfolio_welcome.show {
-  display: block;
+body .portfolio_welcome.hide {
+  display: none;
 }
 body .portfolio_welcome span {
   text-transform: capitalize;
