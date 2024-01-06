@@ -16,6 +16,11 @@ body {
         color: black;
     }
 
+    ul {
+        padding: 0;
+        list-style: none;
+    }
+
     h1 {
         margin: 0;
         padding: 0;
@@ -70,9 +75,7 @@ body {
             left: 0;
             bottom: 0;
             top: 0;
-            // text-align: center;
-            // padding-block-start: 20%;
-            // padding-inline: 40%;
+
 
             input {
                 border-top: none;
@@ -113,10 +116,6 @@ body {
             }
         }
 
-        &_welcome {
-            z-index: 1;
-        }
-
         &_nav {
             &_left {
                 display: flex;
@@ -125,7 +124,6 @@ body {
 
                 &_logo {
                     width: 2rem;
-                    border-radius: 10rem;
 
                     img {
                         width: 100%;
@@ -133,6 +131,69 @@ body {
                         border-radius: 10rem;
                     }
                 }
+            }
+
+            &_right {
+                &_menu {
+                    display: none;
+
+                    @media screen and (max-width:772px) {
+                        &.show {
+
+                            display: block;
+                            width: 100%;
+                            position: absolute;
+                            right: 0;
+                            left: 0;
+                            top: 1.3rem;
+                            text-align: center;
+                            background-color: green;
+
+                            li {
+                                background-color: rgb(158, 141, 51);
+                                margin-block: 1rem;
+                            }
+                        }
+                    }
+
+
+                    @media screen and (min-width:772px) {
+                        padding-inline: 0rem 1rem;
+                        display: flex;
+                        align-items: center;
+                        gap: 2rem;
+                        font-size: 0.9rem;
+                    }
+                }
+
+                &_mobile {
+                    background-color: rgb(158, 141, 51);
+                    padding-inline: 0.5rem;
+                    padding-block: 0.25rem;
+
+                    @media screen and (min-width:772px) {
+                        display: none;
+                    }
+
+                    .fa-bars {
+                        &.hide {
+                            display: none;
+                        }
+                    }
+
+                    .fa-x {
+                        display: none;
+
+                        &.show {
+                            display: block;
+                        }
+                    }
+                }
+
+                i {
+                    cursor: pointer;
+                }
+
             }
         }
 
@@ -146,46 +207,50 @@ body {
             right: 0;
             left: 0;
             top: 0;
-            padding-inline: 4rem;
+            padding-inline: 1rem;
 
-
-
-            ul {
-                padding-inline: 0rem 2rem;
-                list-style: none;
-                display: flex;
-                align-items: center;
-                gap: 2rem;
-                font-size: 0.9rem;
+            @media screen and (min-width:992px) {
+                padding-inline: 4rem;
             }
         }
 
         #portfolio_hero {
-            padding: 4rem 1rem 1rem 4rem;
+            @media screen and (min-width:992px) {
+                padding-block-start: 4rem;
+                padding-inline: 4rem;
+            }
+            
+
             margin: 0;
             border-radius: 20px;
             background-image: url(/images/landing.jpg);
             background-repeat: no-repeat;
             background-size: cover;
-            background-position: 100%;
+            background-position:100%;
+            padding-inline: 1rem;
+            padding-block-start: 4rem;
+            padding-block-end: 2rem;
         }
 
         &_hero {
+   
+
             &_top {
                 display: flex;
-                gap: 30%;
+                justify-content: space-between;
                 align-items: center;
+                padding-block-end: 3rem;
+                padding-block-start: 4rem;
 
                 h6 {
-                    font-size: 1.5rem;
+                    font-size: 2rem;
                     font-weight: 100;
                 }
 
-                padding-block-start: 4rem;
 
                 &_second {
                     h1 {
-                        font-size: 2.8rem;
+                        font-size: 4rem;
                         font-weight: 800;
                     }
                 }
@@ -196,33 +261,21 @@ body {
 
                 // &_last {}
 
-                padding-block-end: 3rem;
+
 
                 &_right {
                     color: green;
 
-                    h1 {
-                        font-family: 'Josefin Sans', sans-serif;
-                        line-height: 1rem;
-                    }
-
-                    .exprience {
-                        font-size: 18rem;
-                    }
-
-                    .loading {
+                    &_exp {
                         display: none;
-                        width: 100%;
-                        background-color: white;
-                        padding: 1rem;
-                        position: absolute;
-                        z-index: 4;
-                        left: 0;
-                        right: 0;
-                        text-align: center;
+                        h1 {
+                            font-family: 'Josefin Sans', sans-serif;
+                            line-height: 1rem;
+                            font-size: 1rem;
+                        }
 
-                        &.half {
-                            width: 50%;
+                        .exprience {
+                            font-size: 5rem;
                         }
                     }
 
@@ -244,19 +297,26 @@ body {
                 padding-block-start: 4rem;
 
                 &_contacts_means {
-                    display: flex;
+                    display: none;
+
+                    @media screen and (min-width:481px) {
+                        display: flex;
+                    }
+
 
                     &_email,
                     &_phone,
                     &_location {
-                        padding-inline: 1rem;
+                        padding-inline: 0.5rem;
 
                         h1 {
-                            font-size: 0.8rem;
+                            font-size: 1rem;
+                            font-weight: 100;
                         }
 
                         a {
                             font-size: 0.7rem;
+                            font-weight: 100;
                         }
 
                         border-right: 1px solid;
@@ -273,26 +333,10 @@ body {
 
                 &_switch {
                     position: fixed;
-                    right: 3rem;
+                    right: 1rem;
                     z-index: 4;
 
-                    h1 {
-                        display: none;
-                        font-size: 12px;
-                        font-weight: 100;
-                        background-color: #766f6f;
-                        position: absolute;
-                        color: white;
-                        top: 1rem;
-                        left: 1.5rem;
-                        padding-inline: 0.4rem;
-                        padding-block: 0.2rem;
-                        scroll-behavior: smooth;
 
-                        &.show {
-                            display: block;
-                        }
-                    }
 
                     .switch {
 
@@ -334,6 +378,128 @@ body {
                 }
 
             }
+            @media screen and (min-width:992px) {
+                &_top {
+
+                    h6 {
+                        font-size: 2rem;
+                        font-weight: 100;
+                    }
+
+                    &_second {
+                        h1 {
+                            font-size: 2.8rem;
+                            font-weight: 800;
+                        }
+                    }
+
+                    &_third {
+                        margin-block-end: 0.8rem;
+                    }
+                    &_right {
+                        color: green;
+                        &_exp {
+                            display: block;
+                            h1 {
+                                font-family: 'Josefin Sans', sans-serif;
+                                line-height: 1rem;
+                                font-size: 4rem;
+                            }
+    
+                            .exprience {
+                                font-size: 18rem;
+    
+                            
+                            }
+                        }
+                        button {
+                            display: none;
+                            position: absolute;
+                            z-index: 4;
+                            top: 50px;
+
+                        }
+                    }
+
+                }
+
+                &_bottom {
+                    &_contacts_means {
+                        display: flex;
+
+                        &_email,
+                        &_phone,
+                        &_location {
+                            padding-inline: 1rem;
+
+                            h1 {
+                                font-size: 1rem;
+                                font-weight: 800;
+                            }
+
+                            a {
+                                font-size: 1rem;
+                            }
+
+                            border-right: 1px solid;
+                        }
+
+                        &_email {
+                            padding-inline-start: 0;
+                        }
+
+                        &_location {
+                            border: 0;
+                        }
+                    }
+
+                    // &_switch {
+                    //     position: fixed;
+                    //     right: 4rem;
+
+
+
+                    //     .switch {
+
+                    //         position: relative;
+                    //         width: 30px;
+                    //         height: 70px;
+                    //         border-radius: 100px;
+                    //         background-color: black;
+                    //         cursor: pointer;
+                    //     }
+
+                    //     .switch::before {
+                    //         content: "";
+                    //         position: absolute;
+                    //         background-color: white;
+                    //         height: 25px;
+                    //         width: 25px;
+                    //         border-radius: 50%;
+                    //         bottom: 60%;
+                    //         // top: 1rem;
+                    //         right: 2px;
+                    //         left: 2px;
+                    //         // transform: translateY(-55%);
+                    //         transition: all 0.3s ease-in;
+                    //     }
+
+                    //     .switch.active::before {
+                    //         content: "";
+                    //         background-color: #000;
+                    //         transition: all 0.3s ease-in;
+                    //         // top: calc(100% - 20px - 8px)
+                    //         top: 60%;
+                    //         bottom: 1rem;
+                    //     }
+
+                    //     .switch.active {
+                    //         background-color: white;
+                    //     }
+                    // }
+
+                }
+            }
         }
 
         &_welcome {
@@ -369,8 +535,14 @@ body {
 
         #portfolio_about {
             padding-block-start: 4rem;
-            padding-inline: 4rem;
-            margin-inline: 4rem;
+            padding-inline: 2rem;
+            // margin-inline: 2rem;
+
+            @media screen and (min-width:992px) {
+                padding-block-start: 4rem;
+                padding-inline: 4rem;
+                margin-inline: 4rem;
+            }
         }
 
         &_about {
@@ -378,19 +550,10 @@ body {
 
             &_header {
 
-                padding-inline: 2rem;
+                // padding-inline: 2rem;
                 display: flex;
                 align-items: center;
-                margin-block-end: 2.5rem;
-
-                .h11 {
-                    position: absolute;
-                    top: 87%;
-                    font-size: 4rem;
-                    font-weight: 900;
-                    color: green;
-                    z-index: -1;
-                }
+                // margin-block-end: 2.5rem;
 
                 .h2 {
                     font-size: 1.8rem;
@@ -398,11 +561,14 @@ body {
             }
 
             &_inner {
-                padding-inline: 2rem;
-                display: grid;
-                align-items: center;
-                grid-template-columns: 0.5fr 1fr;
-                gap: 2rem;
+                @media screen and (min-width:992px) {
+                    padding-inline: 2rem;
+                    display: block;
+                    display: grid;
+                    align-items: center;
+                    grid-template-columns: 0.5fr 1fr;
+                    gap: 2rem;
+                }
 
                 &_right {
                     &_header {
@@ -469,6 +635,11 @@ body {
                 }
 
                 &_left {
+                    display: none;
+
+                    @media screen and (min-width:992px) {
+                        display: block;
+                    }
 
                     img {
                         width: 100%;
@@ -478,7 +649,7 @@ body {
         }
 
         #portfolio_services {
-            padding-inline: 4rem;
+            padding-inline: 2rem;
             padding-block-start: 4rem;
             margin-block-start: 1rem;
         }
@@ -487,15 +658,6 @@ body {
 
             &_header {
                 margin-block-end: 3rem;
-
-                .h11 {
-                    position: absolute;
-                    bottom: -110.5%;
-                    z-index: -1;
-                    font-size: 4rem;
-                    font-weight: 900;
-                    color: green;
-                }
 
                 .h2 {
                     font-size: 1.8rem;

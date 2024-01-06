@@ -56,7 +56,7 @@
                 </div>
             </div>
             <div class="portfolio_nav_right">
-                <ul>
+                <ul class="portfolio_nav_right_menu">
                     <a href="#portfolio_hero">
                         <li>Home</li>
                     </a>
@@ -68,6 +68,10 @@
                     </a>
                     <li>Contact</li>
                 </ul>
+                <div class="portfolio_nav_right_mobile">
+                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-x"></i>
+                </div>
             </div>
         </nav>
         <div id="portfolio_hero">
@@ -87,11 +91,13 @@
                     </div>
                 </div>
                 <div class="portfolio_hero_top_right">
-                    <h1>Exp</h1>
-                    <h1><span class="exprience"></span>+</h1>
-                    <div class="loading">
-                        <h1>loading <span class="num"></span></h1>
+                    <div class="portfolio_hero_top_right_exp">
+                        <h1>Exp</h1>
+                        <h1><span class="exprience"></span>+</h1>
                     </div>
+                    <!-- <div class="loading">
+                        <h1>loading <span class="num"></span></h1>
+                    </div> -->
                     <button title="h" onclick="loading()"></button>
                 </div>
             </div>
@@ -117,8 +123,7 @@
                     </div>
                 </div>
                 <div class="portfolio_hero_bottom_switch">
-                    <h1 class="tag">Tap</h1>
-                    <div class="switch" onmouseover="hove()" title="Tap"></div>
+                    <div class="switch" title="Tap"></div>
                 </div>
 
             </div>
@@ -126,7 +131,7 @@
         <div class="portfolio_welcome">
             <div class="portfolio_welcome_top">
                 <h1 class="Welcome"> Welcome <span class="welcome_name"></span></h1>
-                <i class="fas fa-x"></i>
+                <i class="fas fa-x x"></i>
             </div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint nostrum illo reprehenderit nihil laborum ad
                 eos fuga aliquam quo tempora harum, pariatur eveniet ratione! Quos fuga in ipsam consequatur laboriosam
@@ -134,7 +139,6 @@
         </div>
         <div id="portfolio_about">
             <div class="portfolio_about_header">
-                <h1 class="h11">ABOUT</h1>
                 <h1 class="h2">About Me</h1>
             </div>
             <div class="portfolio_about_inner">
@@ -187,7 +191,6 @@
         </div>
         <div id="portfolio_services">
             <div class="portfolio_services_header">
-                <h1 class="h11">SERVICES</h1>
                 <h1 class="h2">My Services</h1>
             </div>
             <div class="portfolio_services_table">
@@ -313,9 +316,9 @@
         </div>
 
 </body>
-<script>  document.querySelector(".fa-x").addEventListener("click", () => {
-      document.querySelector(".portfolio_welcome").classList.add("hide")
-})
+<script>  document.querySelector(".x").addEventListener("click", () => {
+        document.querySelector(".portfolio_welcome").classList.add("hide")
+    })
     let count = 0
     function loading() {
         count++
@@ -395,11 +398,6 @@
 
     let entered_name = localStorage.getItem("name")
     document.querySelector(".welcome_name").innerHTML = entered_name;
-    // function welcomeMssg(list, name) {
-    //     let entered_name= localStorage.getItem("name")
-    //     return document.querySelector(".welcome_name").innerHTML = entered_name;
-
-    // }
     function findNameById(list, name) {
         return list.find((obj) => obj.name === name).name;
 
@@ -454,6 +452,16 @@
     // //Calling a function during form submission.
     // form.addEventListener('submit', submitForm);
 
+    document.querySelector(".fa-bars").addEventListener("click", () => {
+        document.querySelector(".fa-x").classList.add("show")
+        document.querySelector(".fa-bars").classList.add("hide")
+        document.querySelector(".portfolio_nav_right_menu").classList.add("show")
+    })
+    document.querySelector(".fa-x").addEventListener("click", () => {
+        document.querySelector(".fa-bars").classList.remove("hide")
+        document.querySelector(".fa-x").classList.remove("show")
+        document.querySelector(".portfolio_nav_right_menu").classList.remove("show")
+    })
     // MODE CONTROLLER
     let root = localStorage.getItem("mode");
     document.querySelector(".switch").addEventListener("click", () => {
