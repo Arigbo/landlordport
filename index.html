@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>LANDLORD</title>
     <link rel="stylesheet" href="/styles/custom.css">
+    <script src="/index.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -29,7 +32,7 @@
                     <button class="signup" title="SIGNUP" type="submit">Signup</button>
                 </form>
                 <!-- LOGIN PAGE -->
-                <form class="portfolio_sorl_inner_login" id="formId">
+                <form class="portfolio_sorl_inner_login" id="formId" onsubmit="submitForm()">
                     <div class="inputs">
                         <h1 class="ogmssg"></h1>
                         <input placeholder="Name" type="text" id="loginname" class="loginname" name="name"
@@ -40,7 +43,7 @@
                             class="loginpassword" autocomplete="additional-name" required>
                     </div>
                     <h1 class="gotosignup">signin</h1>
-                    <button title="LOGIN" class="login">Login</button>
+                    <button title="LOGIN" class="login" onclick="login()">Login</button>
                 </form>
             </div>
         </div>
@@ -66,7 +69,9 @@
                     <a href="#portfolio_services">
                         <li>Services</li>
                     </a>
-                    <li>Contact</li>
+                    <a href="#portfolio_works">
+                        <li>Works</li>
+                    </a>
                 </ul>
                 <div class="portfolio_nav_right_mobile">
                     <i class="fas fa-bars"></i>
@@ -75,7 +80,7 @@
             </div>
         </nav>
         <div id="portfolio_hero">
-            <div class="portfolio_hero_top">
+            <div class="portfolio_hero_top"  data-aos="fade-right">
                 <div class="portfolio_hero_top_left">
                     <div class="portfolio_hero_top_first">
                         <h6>Hi There!</h6>
@@ -128,7 +133,8 @@
 
             </div>
         </div>
-        <div class="portfolio_welcome">
+        <div class="portfolio_welcome"  data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom">
             <div class="portfolio_welcome_top">
                 <h1 class="Welcome"> Welcome <span class="welcome_name"></span></h1>
                 <i class="fas fa-x x"></i>
@@ -137,7 +143,7 @@
                 eos fuga aliquam quo tempora harum, pariatur eveniet ratione! Quos fuga in ipsam consequatur laboriosam
                 laudantium? Porro libero autem quisquam facere neque eligendi tempore sunt!</p>
         </div>
-        <div id="portfolio_about">
+        <div id="portfolio_about" data-aos="fade-right" >
             <div class="portfolio_about_header">
                 <h1 class="h2">About Me</h1>
             </div>
@@ -194,6 +200,7 @@
                 <h1 class="h2">My Services</h1>
             </div>
             <div class="portfolio_services_table">
+
                 <!-- <div class="portfolio_services_table_webdev">
                     <div class="portfolio_services_table_webdev_icon">
                         <i class="fas fa-cube"></i>
@@ -297,36 +304,72 @@
                             voluptates
                             repellendus eligendi praesentium dolorum sapiente minima iure velit.</p>
                     </div>
-                </div>
-                <div class="portfolio_services_table_webdev">
-                    <div class="portfolio_services_table_webdev_icon">
-                        <i class="fas fa-cube"></i>
+                </div>  -->
+            </div>
+            </di>
+        </div>
+        <div id="portfolio_works"  data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom">
+            <div class="portfolio_works_header">
+                <h1 class="h2">My Works </h1>
+            </div>
+            <div class="portfolio_works_table">
+                <a href="https://harishiwine.vercel.app/" class="portfolio_works_table_inner">
+                    <div class="portfolio_works_table_inner_icon">
+                        <i class="fas fa-house"></i>
                     </div>
-                    <div class="portfolio_services_table_webdev_title">
-                        <h1 class="h1">Web Developed</h1>
+                    <div class="portfolio_works_table_inner_title">
+                        <h1 class="h1">Harishi</h1>
                     </div>
-                    <div class="portfolio_services_table_webdev_about">
+                    <div class="portfolio_works_table_inner_about">
                         <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta mollitia eos
                             voluptates
                             repellendus eligendi praesentium dolorum sapiente minima iure velit.</p>
                     </div>
-                </div> -->
+                </a>
+                <a href="https://harishiwine.vercel.app/" class="portfolio_works_table_inner">
+                    <div class="portfolio_works_table_inner_icon">
+                        <i class="fas fa-house"></i>
+                    </div>
+                    <div class="portfolio_works_table_inner_title">
+                        <h1 class="h1">Harishi</h1>
+                    </div>
+                    <div class="portfolio_works_table_inner_about">
+                        <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta mollitia eos
+                            voluptates
+                            repellendus eligendi praesentium dolorum sapiente minima iure velit.</p>
+                    </div>
+                </a>
+                <a href="https://harishiwine.vercel.app/" class="portfolio_works_table_inner">
+                    <div class="portfolio_works_table_inner_icon">
+                        <i class="fas fa-house"></i>
+                    </div>
+                    <div class="portfolio_works_table_inner_title">
+                        <h1 class="harishi">Harishi</h1>
+                    </div>
+                    <div class="portfolio_works_table_inner_about">
+                        <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta mollitia eos
+                            voluptates
+                            repellendus eligendi praesentium dolorum sapiente minima iure velit.</p>
+                    </div>
+                </a>
             </div>
-            </di>
         </div>
-
+    </div>
 </body>
-<script>  document.querySelector(".x").addEventListener("click", () => {
+<script>
+    // WELCOME PAGE HIDER
+    document.querySelector(".x").addEventListener("click", () => {
         document.querySelector(".portfolio_welcome").classList.add("hide")
     })
     let count = 0
-    function loading() {
-        count++
-        document.querySelector(".num").innerHTML = count
-        if (count === 10 || count === 20) {
-            document.querySelector(".loading").classList.toggle("half")
-        }
-    }
+    // function loading() {
+    //     count++
+    //     document.querySelector(".num").innerHTML = count
+    //     if (count === 10 || count === 20) {
+    //         document.querySelector(".loading").classList.toggle("half")
+    //     }
+    // }
     let year = 2004;
     let month = 6;
     let day = 7;
@@ -340,7 +383,7 @@
     let expStart = new Date(yearStarted, monthStarted);
     let exprience = (currentDate.getFullYear() - expStart.getFullYear())
     document.querySelector(".exprience").innerHTML = exprience
-    // LOIGN OR SIGNUPPAGE CONTRLLER
+    // LOIGNPAGE OR SIGNUPPAGE CONTRLLER
     let veripages = localStorage.getItem("veripages");
     document.querySelector(".gotologin").addEventListener("click", () => {
         document.querySelector(".portfolio_sorl_inner_login").classList.toggle("show");
@@ -380,67 +423,69 @@
         //     document.querySelector(".welcome_name").innerHTML = document.querySelector("#loginname").value
         // }
     }
-    // DATA
-    let logined = localStorage.getItem("login")
-    const identity = [
+
+    const works = [
         {
-            id: 34,
-            name: "jesse",
-            password: 123456,
+            id: 1,
+            name: "Harishi",
+            about: "",
+            logo: "fas fa-house"
         },
-        {
-            id: 35,
-            name: "mary",
-            password: 1,
-        }
     ]
+
     // LOGIN DETAILS RETIEVA
 
     let entered_name = localStorage.getItem("name")
     document.querySelector(".welcome_name").innerHTML = entered_name;
-    function findNameById(list, name) {
-        return list.find((obj) => obj.name === name).name;
-
-    }
-    console.log(findNameById(identity, "jesse"))
     // RULE SET FOR LOGININ
+    let logined = localStorage.getItem("login")
 
-    document.querySelector(".login").addEventListener("click", () => {
-        for (let id of identity) {
-            if (document.querySelector("#loginname").value == id.name && document.querySelector("#loginpassword").value == id.password) {
-                document.querySelector(".portfolio_sorl").classList.add("hide");
-                document.querySelector(".portfolio_welcome").classList.remove("hide")
-                console.log("correct");
-                localStorage.setItem("name", findNameById(identity, document.querySelector("#loginname").value))
-                return localStorage.setItem("login", "logined");
+    function login() {
+        fetch('index.json')
+            .then(res => res.json())
+            .then(data => {
 
-            }
-            else if (document.querySelector("#loginname").value == id.name && document.querySelector("#loginpassword").value !== id.password) {
-                console.log("Not ", document.querySelector("#loginname").value, "'s password");
-                document.querySelector(".ogmssg").innerHTML = "OG HOW FAR NAW!, YOU WAWN WHINE ME PASSWORD NAW";
-            }
-            else if (document.querySelector("#loginname").value !== id.name && document.querySelector("#loginpassword").value == id.password) {
-                console.log("Not ", document.querySelector("#loginpassword").value, "'s name");
-                document.querySelector(".ogmssg").innerHTML = "OG HOW FAR NAW!, NAME NO BALANCE NAW!!!!!";
-            }
-            else if (document.querySelector("#loginname").value.trim() == "" && document.querySelector("#loginpassword").value.trim() == "") {
-                console.log("input somerhing");
-                document.querySelector(".ogmssg").innerHTML = "OG HOW FAR NAW!!!!";
-            }
-            else {
-                document.querySelector(".ogmssg").innerHTML = "OG HOW FAR NAW!, INPUT NO BALANCE WITH WETIN YOU PASTE NAW!!"
-                console.log("not correct");
-            }
-        }
-    })
+                console.log(data);
+                data.map((id) => {
+                    if (document.querySelector("#loginname").value == `${id.name}` && document.querySelector("#loginpassword").value == `${id.password}`) {
+                        document.querySelector(".portfolio_sorl").classList.add("hide");
+                        document.querySelector(".portfolio_welcome").classList.remove("hide")
+                        console.log("correct");
+                        localStorage.setItem("name", document.querySelector("#loginname").value)
+                        return localStorage.setItem("login", "logined");
+                    }
+                    else if (document.querySelector("#loginname").value == `${id.name}` && document.querySelector("#loginpassword").value !== `${id.password}`) {
+                        console.log("Not ", document.querySelector("#loginname").value, "'s password");
+                        document.querySelector(".ogmssg").innerHTML = "OG HOW FAR NAW!, YOU WAWN WHINE ME PASSWORD NAW";
+                    }
+                    else if (document.querySelector("#loginname").value !== `${id.name}` && document.querySelector("#loginpassword").value == `${id.password}`) {
+                        console.log("Not ", document.querySelector("#loginpassword").value, "'s name");
+                        document.querySelector(".ogmssg").innerHTML = "OG HOW FAR NAW!, NAME NO BALANCE NAW!!!!!";
+                    }
+                    else if (document.querySelector("#loginname").value.trim() == "" && document.querySelector("#loginpassword").value.trim() == "") {
+                        console.log("input somerhing");
+                        document.querySelector(".ogmssg").innerHTML = "OG HOW FAR NAW!!!!";
+                    }
+                    else {
+                        document.querySelector(".ogmssg").innerHTML = "OG HOW FAR NAW!, INPUT NO BALANCE WITH WETIN YOU PASTE NAW!!"
+                        console.log("not correct");
+                    }
+                }
+                );
+            })
+    }
 
     if (logined && logined === "logined") {
         document.querySelector(".portfolio_sorl").classList.add("hide");
         console.log("logged");
     }
+    document.querySelector(".harishi").innerHTML = `<h1 class="identity">${works.length}</h1>`
 
-    // // FORM CONTROL
-    // //Get form element
+
+
+
+    // FORM CONTROL
+    //Get form element
     // var form = document.getElementById("formId");
     // function submitForm(event) {
 
@@ -451,7 +496,7 @@
 
     // //Calling a function during form submission.
     // form.addEventListener('submit', submitForm);
-
+    // NAV CONTROLLER
     document.querySelector(".fa-bars").addEventListener("click", () => {
         document.querySelector(".fa-x").classList.add("show")
         document.querySelector(".fa-bars").classList.add("hide")
@@ -488,6 +533,9 @@
     function hove() {
         document.querySelector(".tag").classList.toggle("show")
     }
+
+    AOS.init();
+
 </script>
 
 </html>
