@@ -523,8 +523,6 @@ body .portfolio_works_header h1 {
 }
 body .portfolio_works_table {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
   gap: 4rem;
   text-align: center;
 }
