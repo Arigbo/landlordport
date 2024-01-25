@@ -136,22 +136,32 @@ body {
             &_right {
                 &_menu {
                     display: none;
-
+                 
                     @media screen and (max-width:772px) {
+                           
+                    transition: ease 2s;
                         &.show {
-
                             display: block;
-                            width: 100%;
+                            width: auto;
+                            height: auto;
                             position: absolute;
                             right: 0;
                             left: 0;
                             top: 1.3rem;
                             text-align: center;
-                            background-color: green;
+                            background-color: black;
+                            padding-inline: 1rem;
+                          
 
                             li {
+                                width: 100%;
                                 background-color: rgb(158, 141, 51);
-                                margin-block: 1rem;
+                                margin-block: 4rem;
+                                font-size: 3rem;
+                                &.active{
+                                    color:  rgb(158, 141, 51);
+                                    background-color: #000;
+                                }
                             }
                         }
                     }
@@ -198,6 +208,7 @@ body {
         }
 
         nav {
+            z-index: 1;
             -webkit-backdrop-filter: blur(24px);
             backdrop-filter: blur(24px);
             position: fixed;
@@ -219,7 +230,7 @@ body {
                 padding-block-start: 4rem;
                 padding-inline: 4rem;
             }
-            
+
 
             margin: 0;
             border-radius: 20px;
@@ -233,7 +244,7 @@ body {
         }
 
         &_hero {
-   
+
 
             &_top {
                 display: flex;
@@ -268,6 +279,7 @@ body {
 
                     &_exp {
                         display: none;
+
                         h1 {
                             font-family: 'Josefin Sans', sans-serif;
                             line-height: 1rem;
@@ -378,6 +390,7 @@ body {
                 }
 
             }
+
             @media screen and (min-width:992px) {
                 &_top {
 
@@ -396,22 +409,26 @@ body {
                     &_third {
                         margin-block-end: 0.8rem;
                     }
+
                     &_right {
                         color: green;
+
                         &_exp {
                             display: block;
+
                             h1 {
                                 font-family: 'Josefin Sans', sans-serif;
                                 line-height: 1rem;
                                 font-size: 4rem;
                             }
-    
+
                             .exprience {
                                 font-size: 18rem;
-    
-                            
+
+
                             }
                         }
+
                         button {
                             display: none;
                             position: absolute;
@@ -504,6 +521,7 @@ body {
 
         &_welcome {
             position: fixed;
+            z-index: 1;
             background-color: white;
             top: 0;
             bottom: 0;
@@ -511,6 +529,7 @@ body {
             left: 0;
             padding-inline: 20%;
             padding-block: 4rem;
+
 
             &.hide {
                 display: none;
@@ -536,12 +555,13 @@ body {
         #portfolio_about {
             padding-block-start: 4rem;
             padding-inline: 2rem;
-            // margin-inline: 2rem;
+ 
 
             @media screen and (min-width:992px) {
                 padding-block-start: 4rem;
                 padding-inline: 4rem;
                 margin-inline: 4rem;
+                margin-block-start: 4rem;
             }
         }
 
@@ -713,6 +733,38 @@ body {
                 i {
                     color: green;
                     font-size: 3rem;
+                }
+            }
+        }
+
+        #portfolio_works {
+            padding-inline: 1rem;
+
+        }
+
+        &_works {
+            &_header {
+                margin-block-end: 3rem;
+
+                h1 {
+                    font-size: 1.8rem;
+                }
+            }
+
+            &_table {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr;
+                gap: 4rem;
+                text-align: center;
+
+                &_inner {
+                    &_icon {
+                        .fa-house {
+                            font-size: 4rem;
+                            color: rgb(158, 141, 51);
+                        }
+                    }
                 }
             }
         }
