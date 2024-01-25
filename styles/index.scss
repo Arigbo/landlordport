@@ -757,10 +757,9 @@ body {
                 gap: 4rem;
                 text-align: center;
 
-                @media screen and(min-width:992px) {
+                @media screen and (min-width:992px) {
                     display: grid;
                     grid-template-columns: 1fr 1fr 1fr;
-                    grid-template-rows: 1fr;
                 }
 
                 &_inner {
