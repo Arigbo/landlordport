@@ -136,10 +136,11 @@ body {
             &_right {
                 &_menu {
                     display: none;
-                 
+
                     @media screen and (max-width:772px) {
-                           
-                    transition: ease 2s;
+
+                        transition: ease 2s;
+
                         &.show {
                             display: block;
                             width: auto;
@@ -151,15 +152,16 @@ body {
                             text-align: center;
                             background-color: black;
                             padding-inline: 1rem;
-                          
+
 
                             li {
                                 width: 100%;
                                 background-color: rgb(158, 141, 51);
                                 margin-block: 4rem;
                                 font-size: 3rem;
-                                &.active{
-                                    color:  rgb(158, 141, 51);
+
+                                &.active {
+                                    color: rgb(158, 141, 51);
                                     background-color: #000;
                                 }
                             }
@@ -555,7 +557,7 @@ body {
         #portfolio_about {
             padding-block-start: 4rem;
             padding-inline: 2rem;
- 
+
 
             @media screen and (min-width:992px) {
                 padding-block-start: 4rem;
@@ -752,13 +754,15 @@ body {
             }
 
             &_table {
-                display: grid;
                 gap: 4rem;
                 text-align: center;
-@media screen and(min-width:992px){
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-}
+
+                @media screen and(min-width:992px) {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-template-rows: 1fr;
+                }
+
                 &_inner {
                     &_icon {
                         .fa-house {
