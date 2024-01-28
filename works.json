@@ -3,19 +3,20 @@
     {
         "id": 1,
         "name": "Harishi",
-        "about": "",
+        "link":"https://harishiwine.vercel.app/",
+        "about": "At our company, we're dedicated to crafting the highest quality beverages possible. We take pride in our products, and we hope that you enjoy them as much as we do. Thank you for visiting our website! If you have any questions or feedback, please don't hesitate to contact us. We're always happy to hear from our customers.",
         "logo": "fas fa-house"
     },
     {
         "id": 2,
         "name": "Login Page",
         "about": "",
-        "logo": "fas fa-house"
+        "logo": "fas fa-person"
     },
     {
-        "id": 1,
-        "name": "Harishi",
+        "id": 3,
+        "name": "vowel",
         "about": "",
-        "logo": "fas fa-house"
+        "logo": "fas fa-calculator"
     }
 ]

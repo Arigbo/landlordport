@@ -16,6 +16,11 @@ body a {
 body ul {
   padding: 0;
   list-style: none;
+  margin: 0;
+}
+body ul li {
+  margin: 0;
+  padding: 0;
 }
 body h1 {
   margin: 0;
@@ -46,6 +51,9 @@ body.dark a {
 }
 body.dark .portfolio_welcome {
   background-color: #000;
+}
+body.dark .portfolio_works_table_inner_work {
+  border: 1px solid white;
 }
 body .portfolio_sorl {
   -webkit-backdrop-filter: blur(24px);
@@ -89,6 +97,9 @@ body .portfolio_sorl_inner_login.show {
 body .portfolio_sorl_inner_signup.hide {
   display: none;
 }
+body .portfolio_nav {
+  padding-block: 0;
+}
 body .portfolio_nav_left {
   display: flex;
   align-items: center;
@@ -98,12 +109,16 @@ body .portfolio_nav_left_logo {
   width: 2rem;
 }
 body .portfolio_nav_left_logo img {
+  height: 2.3rem;
   width: 100%;
-  height: auto;
   border-radius: 10rem;
+}
+body .portfolio_nav_right {
+  padding-block: 0;
 }
 body .portfolio_nav_right_menu {
   display: none;
+  padding-block: 0;
 }
 @media screen and (max-width: 772px) {
   body .portfolio_nav_right_menu {
@@ -116,7 +131,7 @@ body .portfolio_nav_right_menu {
     position: absolute;
     right: 0;
     left: 0;
-    top: 1.3rem;
+    top: 2.5rem;
     background-color: black;
   }
   body .portfolio_nav_right_menu.show li {
@@ -134,9 +149,9 @@ body .portfolio_nav_right_menu {
   body .portfolio_nav_right_menu {
     padding-inline: 0rem 1rem;
     display: flex;
-    align-items: center;
     gap: 2rem;
     font-size: 0.9rem;
+    padding-block: 0;
   }
   body .portfolio_nav_right_menu li {
     padding-block: 1rem;
@@ -195,7 +210,7 @@ body .portfolio #portfolio_hero {
   background-image: url(/images/landing.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 100%;
+  background-position: center;
   padding-block-start: 4rem;
   padding-block-end: 2rem;
 }
@@ -211,6 +226,9 @@ body .portfolio_hero_top {
   align-items: center;
   padding-block-end: 3rem;
   padding-block-start: 4rem;
+}
+body .portfolio_hero_top_left {
+  color: white;
 }
 body .portfolio_hero_top_left_first h1 {
   font-size: 2rem;
@@ -547,17 +565,43 @@ body .portfolio_works_header {
 body .portfolio_works_header h1 {
   font-size: 1.8rem;
 }
-body .portfolio_works_table {
-  gap: 4rem;
-  text-align: center;
+body .portfolio_works_table_inner {
+  gap: 2.2rem;
 }
 @media screen and (min-width: 992px) {
-  body .portfolio_works_table {
+  body .portfolio_works_table_inner {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
   }
 }
-body .portfolio_works_table_inner_icon .fa-house {
+body .portfolio_works_table_inner h1 {
+  text-transform: capitalize;
+}
+body .portfolio_works_table_inner_work {
+  text-align: center;
+  border: 1px solid black;
+  padding-inline: 2rem;
+  padding-block: 1rem;
+}
+body .portfolio_works_table_inner_work_icon .fa-house {
   font-size: 4rem;
   color: rgb(158, 141, 51);
+}
+body .portfolio_works_table_inner_work_header {
+  padding-block-start: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+body .portfolio_error {
+  background-image: url("/images/landing.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding-block: 15%;
+}
+body .portfolio_error h1 {
+  color: rgb(122, 10, 10);
+  font-size: 10rem;
 }/*# sourceMappingURL=index.css.map */
