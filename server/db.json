@@ -1,0 +1,55 @@
+{
+  "post": [
+    {
+      "id": 1
+    },
+    {
+      "name": "jesse",
+      "email": "arigbojesse@gmail.com",
+      "password": "1234r",
+      "id": 2
+    },
+    {
+      "name": "arigbo",
+      "email": "arigbojesse@gmail.com",
+      "password": "1234r",
+      "id": 3
+    },
+    {
+      "name": "arigbo",
+      "email": "arigbojesse@gmail.com",
+      "password": "1234r",
+      "id": 4
+    },
+    {
+      "name": "arigbo",
+      "email": "arigbojesse@gmail.com",
+      "password": "33333",
+      "id": 5
+    },
+    {
+      "name": "jesse",
+      "email": "arigbojesse@gmail.com",
+      "password": "43333",
+      "id": 6
+    },
+    {
+      "name": "favour",
+      "email": "favourarigbo344@gmqil.com",
+      "password": "148141",
+      "id": 7
+    },
+    {
+      "name": "jesse",
+      "email": "arigbojesse@gmail.com",
+      "password": "43",
+      "id": 8
+    },
+    {
+      "name": "jesse",
+      "email": "arigbojesse@gmail.com",
+      "password": "433",
+      "id": 9
+    }
+  ]
+}
