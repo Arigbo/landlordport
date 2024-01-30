@@ -1,0 +1,19 @@
+{
+  "post": [
+    {
+      "id": 1
+    },
+    {
+      "name": "jesse",
+      "email": "arigbojesse@gmail.com",
+      "password": "1234r",
+      "id": 2
+    },
+    {
+      "name": "jesse",
+      "email": "arigbojesse@gmail.com",
+      "password": "1234r",
+      "id": 3
+    }
+  ]
+}
