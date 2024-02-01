@@ -103,7 +103,9 @@ body {
                 // background-color: #fff;
                 margin-top: 15%;
                 margin-inline: 2%;
-
+p{
+    font-size: 0.8rem;
+}
                 .inputs {
                     margin-block: 1rem;
                 }
@@ -117,6 +119,7 @@ body {
                 }
 
                 &_signup {
+
                     &.hide {
                         display: none;
                     }

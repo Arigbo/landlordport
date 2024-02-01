@@ -85,6 +85,9 @@ body .portfolio_sorl_inner {
   margin-top: 15%;
   margin-inline: 2%;
 }
+body .portfolio_sorl_inner p {
+  font-size: 0.8rem;
+}
 body .portfolio_sorl_inner .inputs {
   margin-block: 1rem;
 }
