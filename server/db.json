@@ -1,55 +1,28 @@
 {
   "post": [
     {
-      "id": 1
-    },
-    {
-      "name": "jesse",
-      "email": "arigbojesse@gmail.com",
-      "password": "1234r",
-      "id": 2
-    },
-    {
-      "name": "arigbo",
-      "email": "arigbojesse@gmail.com",
-      "password": "1234r",
-      "id": 3
-    },
-    {
-      "name": "arigbo",
-      "email": "arigbojesse@gmail.com",
-      "password": "1234r",
-      "id": 4
-    },
-    {
-      "name": "arigbo",
-      "email": "arigbojesse@gmail.com",
-      "password": "33333",
-      "id": 5
-    },
-    {
       "name": "jesse",
       "email": "arigbojesse@gmail.com",
       "password": "43333",
-      "id": 6
+      "id": 2
     },
     {
-      "name": "favour",
-      "email": "favourarigbo344@gmqil.com",
-      "password": "148141",
-      "id": 7
-    },
-    {
-      "name": "jesse",
+      "name": "jessea",
       "email": "arigbojesse@gmail.com",
-      "password": "43",
-      "id": 8
+      "password": "43333",
+      "id": 3
     },
     {
-      "name": "jesse",
+      "name": "jessed",
       "email": "arigbojesse@gmail.com",
-      "password": "433",
-      "id": 9
+      "password": "jesse",
+      "id": 4
+    },
+    {
+      "name": "jessed",
+      "email": "arigbojesse@gmail.com",
+      "password": "jesse",
+      "id": 5
     }
   ]
 }
