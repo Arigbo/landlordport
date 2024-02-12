@@ -11,8 +11,6 @@
         href="/favcon/CosplayClass Official Site - Shop Cosplay Costumes Latest & Greatest_ (4).ico"
         type="image/x-icon" />
     <script src="/index.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -20,23 +18,22 @@
         <div class="portfolio_sorl">
             <div class="portfolio_sorl_inner">
                 <!-- SIGNIN PAGE -->
-                <form class="portfolio_sorl_inner_signup">
+                <form class="portfolio_sorl_inner_signup" id="formId">
+
                     <div class="inputs">
-                        <input placeholder="Name" type="text" id="signupname" autocomplete="additional-name" required>
+                        <input placeholder="Name" type="text" id="signupname" required>
                     </div>
                     <div class="inputs">
-                        <input type="email" name="" placeholder="Email" id="signupemail" autocomplete="additional-name"
-                            required>
+                        <input type="email" placeholder="Email" id="signupemail" required>
                     </div>
                     <div class="inputs">
-                        <input type="password" placeholder="Password" name="" autofocus id="signuppassword"
-                            autocomplete="additional-name" required>
+                        <input type="password" placeholder="Password" id="signuppassword" required>
                     </div>
-                    <h1 class="gotologin">login</h1>
-                    <button class="signup" title="SIGNUP" type="submit">Signup</button>
+                    <p>Already have an account? <span class="gotologin">click here</span></p>
+                    <button class="signup" title="SIGNUP" type="submit" onclick="signup()">Signup</button>
                 </form>
                 <!-- LOGIN PAGE -->
-                <form class="portfolio_sorl_inner_login" id="formId" onsubmit="submitForm()">
+                <form class="portfolio_sorl_inner_login" id="formIdLogin">
                     <div class="inputs">
                         <h1 class="ogmssg"></h1>
                         <input placeholder="Name" type="text" id="loginname" class="loginname" name="name"
@@ -46,7 +43,7 @@
                         <input type="password" placeholder="Password" name="password" autofocus id="loginpassword"
                             class="loginpassword" autocomplete="additional-name" required>
                     </div>
-                    <h1 class="gotosignup">signin</h1>
+                    <p>Don't have an account? <span class="gotosignup">click here</span></p>
                     <button title="LOGIN" class="login" onclick="login()">Login</button>
                 </form>
             </div>
@@ -206,113 +203,7 @@
                 <div class="portfolio_services_header">
                     <h1 class="h2">My Services</h1>
                 </div>
-                <div class="portfolio_services_table">
 
-                    <!-- <div class="portfolio_services_table_webdev">
-                <div class="portfolio_services_table_webdev_icon">
-                    <i class="fas fa-cube"></i>
-                </div>
-                <div class="portfolio_services_table_webdev_title">
-                    <h1 class="h1">Web Developed</h1>
-                </div>
-                <div class="portfolio_services_table_webdev_about">
-                    <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta mollitia eos
-                        voluptates
-                        repellendus eligendi praesentium dolorum sapiente minima iure velit.</p>
-                </div>
-            </div>
-            <div class="portfolio_services_table_webdev">
-                <div class="portfolio_services_table_webdev_icon">
-                    <i class="fas fa-cube"></i>
-                </div>
-                <div class="portfolio_services_table_webdev_title">
-                    <h1 class="h1">Web Developed</h1>
-                </div>
-                <div class="portfolio_services_table_webdev_about">
-                    <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta mollitia eos
-                        voluptates
-                        repellendus eligendi praesentium dolorum sapiente minima iure velit.</p>
-                </div>
-            </div>
-            <div class="portfolio_services_table_webdev">
-                <div class="portfolio_services_table_webdev_icon">
-                    <i class="fas fa-cube"></i>
-                </div>
-                <div class="portfolio_services_table_webdev_title">
-                    <h1 class="h1">Web Developed</h1>
-                </div>
-                <div class="portfolio_services_table_webdev_about">
-                    <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta mollitia eos
-                        voluptates
-                        repellendus eligendi praesentium dolorum sapiente minima iure velit.</p>
-                </div>
-            </div>
-            <div class="portfolio_services_table_webdev">
-                <div class="portfolio_services_table_webdev_icon">
-                    <i class="fas fa-cube"></i>
-                </div>
-                <div class="portfolio_services_table_webdev_title">
-                    <h1 class="h1">Web Developed</h1>
-                </div>
-                <div class="portfolio_services_table_webdev_about">
-                    <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta mollitia eos
-                        voluptates
-                        repellendus eligendi praesentium dolorum sapiente minima iure velit.</p>
-                </div>
-            </div>
-            <div class="portfolio_services_table_webdev">
-                <div class="portfolio_services_table_webdev_icon">
-                    <i class="fas fa-cube"></i>
-                </div>
-                <div class="portfolio_services_table_webdev_title">
-                    <h1 class="h1">Web Developed</h1>
-                </div>
-                <div class="portfolio_services_table_webdev_about">
-                    <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta mollitia eos
-                        voluptates
-                        repellendus eligendi praesentium dolorum sapiente minima iure velit.</p>
-                </div>
-            </div>
-            <div class="portfolio_services_table_webdev">
-                <div class="portfolio_services_table_webdev_icon">
-                    <i class="fas fa-cube"></i>
-                </div>
-                <div class="portfolio_services_table_webdev_title">
-                    <h1 class="h1">Web Developed</h1>
-                </div>
-                <div class="portfolio_services_table_webdev_about">
-                    <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta mollitia eos
-                        voluptates
-                        repellendus eligendi praesentium dolorum sapiente minima iure velit.</p>
-                </div>
-            </div>
-            <div class="portfolio_services_table_webdev">
-                <div class="portfolio_services_table_webdev_icon">
-                    <i class="fas fa-cube"></i>
-                </div>
-                <div class="portfolio_services_table_webdev_title">
-                    <h1 class="h1">Web Developed</h1>
-                </div>
-                <div class="portfolio_services_table_webdev_about">
-                    <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta mollitia eos
-                        voluptates
-                        repellendus eligendi praesentium dolorum sapiente minima iure velit.</p>
-                </div>
-            </div>
-            <div class="portfolio_services_table_webdev">
-                <div class="portfolio_services_table_webdev_icon">
-                    <i class="fas fa-cube"></i>
-                </div>
-                <div class="portfolio_services_table_webdev_title">
-                    <h1 class="h1">Web Developed</h1>
-                </div>
-                <div class="portfolio_services_table_webdev_about">
-                    <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta mollitia eos
-                        voluptates
-                        repellendus eligendi praesentium dolorum sapiente minima iure velit.</p>
-                </div>
-            </div>  -->
-                </div>
                 </di>
             </div>
             <div id="portfolio_works">
@@ -329,8 +220,7 @@
 <script>
     // WORKS
     function getProduct() {
-        fetch('/works.json', {
-        })
+        fetch('/works.json')
             .then(results => results.json())
             .then(data => {
                 data.forEach(id => {
@@ -352,8 +242,7 @@
                         <div class="porfolio_works_inner_work_button">
                             <a href=${id.link ? id.link : "/error.html"}><button>Go Website</button></a>
                         </div>
-                    </div>
-                                    `)
+                    </div> `)
                 });
             });
     }
@@ -410,53 +299,73 @@
     }
 
     // RULE SET FOR SIGNUP
-    let signed = localStorage.getItem("signup")
-    function signup(event) {
-        // if ((!document.querySelector("#loginname").value.trim("") === name) || (!document.querySelector("#loginpassword").value.trim("") === password)) {
-        //     console.log("not correct");
-        // }
-        // else if ((document.querySelector("#loginname").value.trim("") === name) || (document.querySelector("#loginpassword").value.trim("") === password)) {
-        //     document.querySelector(".portfolio_sorl").classList.add("hide");
-        //     console.log("correct");
-        //     return localStorage.setItem("login", "logined");
-        //     document.querySelector(".welcome_name").innerHTML = document.querySelector("#loginname").value
-        // }
-    }
+    let signedup = localStorage.getItem("signup")
+    function signup() {
+        const newuser = {
+            name: document.querySelector("#signupname").value,
+            email: document.querySelector("#signupemail").value,
+            password: document.querySelector("#signuppassword").value
+        }
+        fetch(`http://localhost:3000/post`)
+            .then(results => results.json())
+            .then(data => {
+                data.map((id) => {
+                    if (document.querySelector("#signupname").value === `${id.name}`) {
+                        console.log("This name already exists");
+                    }
+                    else if (document.querySelector("#signupname").value.trim() == "" && document.querySelector("#signupemail").value.trim() == "" && document.querySelector("#signuppassword").value.trim() == "") {
+                        console.log("Pls input something");
+                    }
+                    else {
+                        fetch(`http://localhost:3000/post`, {
+                            'method': 'POST',
+                            headers: {
+                                Accept: "application/json",
+                                "Content-type": "application/json"
+                            },
+                            'body': JSON.stringify(newuser)
+                        }).then(result => result.json())
+                            .then(data => console.log(data))
+                        console.log(newuser);
+                        document.querySelector(".portfolio_sorl_inner_signup").classList.add("hide");
+                        document.querySelector(".portfolio_sorl_inner_login").classList.add("show");
+                        localStorage.setItem("signup", "signedup");
+                    }
+                })
+            })
 
+    }
+    if (signedup && signedup == "signedup") {
+        document.querySelector(".portfolio_sorl_inner_signup").classList.add("hide");
+        document.querySelector(".portfolio_sorl_inner_login").classList.add("show");
+    }
 
     // LOGIN DETAILS RETIEVA
 
     let entered_name = localStorage.getItem("name")
-    document.querySelector(".welcome_name").innerHTML = entered_name;
     // RULE SET FOR LOGININ
     let logined = localStorage.getItem("login")
     function login() {
-        fetch('index.json')
-            .then(res => res.json())
+        fetch(`http://localhost:3000/post`)
+            .then(results => results.json())
             .then(data => {
 
                 console.log(data);
                 data.map((id) => {
-                    if (document.querySelector("#loginname").value == `${id.name}` && document.querySelector("#loginpassword").value == `${id.password}`) {
+                    if (document.querySelector("#loginname").value.trim() == `${id.name}` && document.querySelector("#loginpassword").value.trim() == `${id.password}`) {
                         document.querySelector(".portfolio_sorl").classList.add("hide");
                         document.querySelector(".portfolio_welcome").classList.remove("hide")
+                        document.querySelector(".welcome_name").innerHTML = document.querySelector("#loginname").value;
                         console.log("correct");
                         localStorage.setItem("name", document.querySelector("#loginname").value)
-                        return localStorage.setItem("login", "logined");
-                    }
-                    else if (document.querySelector("#loginname").value == `${id.name}` && document.querySelector("#loginpassword").value !== `${id.password}`) {
-                        console.log("Not ", document.querySelector("#loginname").value, "'s password");
-                        document.querySelector(".ogmssg").innerHTML = "OG HOW FAR NAW!, YOU WAWN WHINE ME PASSWORD NAW";
-                    }
-                    else if (document.querySelector("#loginname").value !== `${id.name}` && document.querySelector("#loginpassword").value == `${id.password}`) {
-                        console.log("Not ", document.querySelector("#loginpassword").value, "'s name");
-                        document.querySelector(".ogmssg").innerHTML = "OG HOW FAR NAW!, NAME NO BALANCE NAW!!!!!";
+                        localStorage.setItem("login", "logined");
+
                     }
                     else if (document.querySelector("#loginname").value.trim() == "" && document.querySelector("#loginpassword").value.trim() == "") {
                         console.log("input somerhing");
                         document.querySelector(".ogmssg").innerHTML = "OG HOW FAR NAW!!!!";
                     }
-                    else {
+                    else if (document.querySelector("#loginname").value.trim() !== `${id.name}` && document.querySelector("#loginpassword").value.trim() !== `${id.password}`) {
                         document.querySelector(".ogmssg").innerHTML = "OG HOW FAR NAW!, INPUT NO BALANCE WITH WETIN YOU PASTE NAW!!"
                         console.log("not correct");
                     }
@@ -470,16 +379,20 @@
 
     // FORM CONTROL
     //Get form element
-    // var form = document.getElementById("formId");
-    // function submitForm(event) {
+    var form = document.getElementById("formId");
+    var formLog = document.querySelector("#formIdLogin")
+    function submitForm() {
 
-    //     //Preventing page refresh
+        //Preventing page refresh
 
-    //     event.preventDefault();
-    // }
+            event.preventDefault();
+        
+
+    }
 
     // //Calling a function during form submission.
-    // form.addEventListener('submit', submitForm);
+    form.addEventListener('submit', submitForm);
+    formLog.addEventListener('submit', submitForm);
     // NAV CONTROLLER
     document.querySelector(".fa-bars").addEventListener("click", () => {
         document.querySelector(".fa-x").classList.add("show")
@@ -517,10 +430,6 @@
         document.querySelector("body").classList.remove("dark");
         document.querySelector(".switch").classList.remove("active");
         // document.querySelectorAll(".portfolio_services_table_webdev").classList.remove("web_dark");
-    }
-    // EXTRA MODE SWITCH CONTROL
-    function hove() {
-        document.querySelector(".tag").classList.toggle("show")
     }
     // MENU CONTRL
     let page = localStorage.getItem("page")
@@ -584,7 +493,7 @@
         document.querySelector(".home").classList.remove("active")
 
     }
-    AOS.init();
+
 </script>
 
 </html>
